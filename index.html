@@ -11,16 +11,16 @@
 				padding: 0;
 				margin: 0;
 				overflow: hidden;
-				font-family: georgia;
+				font-family: "Lucida Console";
 				font-size:1em;
 				text-align: center;
 			}
 
 			#info { 
 				position: absolute; 
-				top: 45%;
-				width: 50%; 
-				margin-left: 25%; 
+				top: 43%;
+				width: 40%; 
+				margin-left: 30%; 
 				border: 2px solid white;
 				background-color: rgba(169, 169, 169, 0.3);
 			}
@@ -267,7 +267,7 @@
 
 				scene = new THREE.Scene();
 				scene.background = new THREE.Color( 0xffffff);
-				scene.fog = new THREE.Fog( 0xffffff, 600, 2000 );
+				scene.fog = new THREE.Fog( 0xffffff, 100, 5000);
 
 				// LIGHTS
 
