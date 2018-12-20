@@ -4,51 +4,24 @@
 		<title>Jacob Chvatal</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style type="text/css">
-			body {
-				background: #000;
-				color: rgb(255, 255, 255);
-				padding: 0;
-				margin: 0;
-				overflow: hidden;
-				font-family: "Lucida Console";
-				font-size:1em;
-				text-align: center;
-			}
-			#info { 
-				position: absolute; 
-				top: 43%;
-				width: 40%; 
-				margin-left: 30%; 
-				border: 2px solid white;
-				background-color: rgba(169, 169, 169, 0.3);
-			}
-
-			a { color: #ffffff; }
-
-			#footer { position: absolute; bottom: 5%; width: 100%; }
-			.h { color: #ffffff }
-			.c { display: inline; margin-left: 1em }
-
-		</style>
+		
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
-
 		<div id="info">
-			<h1>Jacob Chvatal</h1>
-			<p>designer and developer</p>
+			Jacob Chvatal
+			designer and developer
 		</div>
 
-		<div id="footer">
+		<div id="arrow-down">
 			<a href = "about.html" class = "button">
-			<div class="c">
-				╲╱
-			</div>
+			<div class="arrow">╲╱</div>
 			</a>
 		</div>
 
-		<div id="container"></div>
+		<div id="three-container"></div>
 
 		<script src="./build/three.js"></script>
 
@@ -243,7 +216,7 @@
 
 			function init() {
 
-				container = document.getElementById( 'container' );
+				container = document.getElementById( 'three-container' );
 
 				// SCENE (RENDER TARGET)
 
