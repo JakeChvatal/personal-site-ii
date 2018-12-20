@@ -13,9 +13,20 @@
   top: 43%;
   bottom: 43%;
   width: 40%; 
+  height: 15%;
   margin-left: 30%; 
+  padding-bottom: 2%;
   border: 2px solid white;
+  text-align: center;
   background-color: rgba(169, 169, 169, 0.3);
+}
+
+
+#three-container{
+  margin: 0;
+  border: none;
+  width: 100%;
+  height: 95%;
 }
 
 #arrow-up{ position: absolute; top: 5%; width: 100%;  text-align: center; }
@@ -141,7 +152,7 @@
   
   .subhead{font-size:1.4rem;font-weight:500;line-height:1.3;margin-bottom:5rem;margin-left:0;}
   
-  .footer {position: absolute; font-size:14px;color:rgb(255, 255, 255);}
+  .footer {position: absolute; font-size:14px;color:rgb(255, 255, 255); padding-bottom: 1em;}
 
   #tooltip {
     position:absolute;
