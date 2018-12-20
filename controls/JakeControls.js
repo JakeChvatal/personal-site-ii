@@ -262,7 +262,7 @@ THREE.JakeControls = function ( object, domElement ) {
 			scope.enableZoom = false;
 
 		}
-		window.open("stuff.html", "_self");
+		window.open("about.html", "_self");
 
 
 	}
