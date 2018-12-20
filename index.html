@@ -436,7 +436,7 @@
 					var time = Date.now() * 0.001;
 					
 					//low and high light intensities
-					var fLow = 0.1, fHigh = 0.8//0.8;
+					var fLow = 0, fHigh = 0.8;
 
 					//changes incoming light value
 					lightVal = THREE.Math.clamp( lightVal + 0.5 * delta, fLow, fHigh );
@@ -444,8 +444,8 @@
 					var valNorm = ( lightVal - fLow ) / ( fHigh - fLow );
 
 					//sets background and fog colors of scene
-					scene.background.setHSL( 0.1, 0.5, lightVal );
-					scene.fog.color.setHSL( 0.1, 0.5, lightVal );
+					scene.background.setHSL( 1, 0.3, lightVal );
+					scene.fog.color.setHSL( 1, 0.3, lightVal );
 
 					directionalLight.intensity = THREE.Math.mapLinear( valNorm, 0, 1, 0.1, 1.15 );
 					pointLight.intensity = THREE.Math.mapLinear( valNorm, 0, 1, 0.9, 1.5 );
@@ -454,7 +454,7 @@
 
 					if ( updateNoise ) {
 
-						animDelta = THREE.Math.clamp( animDelta + 0.00075, 0, 0.05 );
+						animDelta = THREE.Math.clamp( animDelta + 0.0001, 0, 0.05 );
 						uniformsNoise[ 'time' ].value += delta * animDelta;
 
 						uniformsNoise[ 'offset' ].value.x += delta * 0.05;
