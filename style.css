@@ -38,12 +38,32 @@
   margin-right: 0;
 }
 
-#resume{
+#resume {
   text-align: center;
   left: 0%;
-  width: 50%;
-  padding-bottom: 3em;
+  width: 70%;
+  height: 5em;
+  background-color: rgb(255, 220, 220); 
+  color: #3a3a3a;
 }
+
+#resume:hover {
+  background-color:rgb(255, 180, 180);
+  transition:.5s;
+}
+
+#social {
+  height: 2em;
+  border: 2px solid white;
+}
+
+.icon {
+  height: 10em;
+  margin: 1em;
+  color: white;
+  border: 2px solid black;
+}
+
 
 #arrow-up{ position: absolute; top: 5%; width: 100%;  text-align: center; }
 #arrow-down{ position: absolute; bottom: 5%; width: 100%;  text-align: center; }
