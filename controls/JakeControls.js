@@ -315,6 +315,7 @@ THREE.JakeControls = function ( object, domElement ) {
 
 	function handleTouchStartDollyPan( event ) {
 
+		
 		//console.log( 'handleTouchStartDollyPan' );
 
 		if ( scope.enableZoom ) {
