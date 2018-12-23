@@ -57,6 +57,7 @@
 #resume {
   vertical-align: .125em;
 }
+
 .fa-sub {
   position: relative;
   left: -.6em;
@@ -66,7 +67,7 @@
 }
 
 
-#arrow-up{ position: absolute; top: 5%; width: 100%;  text-align: center; }
+#arrow-up{ position: relative; padding-top: 1em; width: 100%;  text-align: center; }
 #arrow-down{ position: absolute; bottom: 5%; width: 100%;  text-align: center; }
 
 /*
@@ -102,13 +103,19 @@
     .container {
       width: 85%;
       padding-left: 0;
-      padding-right: 0; }
+      padding-right: 0;
+    }
+  }
+
+  #arrow-up{
+    padding-top: 2em;
   }
   
   @media (min-width: 550px) {
     .container {
       width: 80%; 
     }
+
     .column,
     .columns {
       margin-left: 4%; 
@@ -206,18 +213,15 @@
   }
   
   /* Typography */
-  h1 { /* 
-    margin-top: 25rem;
-    margin-bottom: 12rem; */
+  h1 {
     font-weight: 500; 
     font-family: "futura-pt", Helvetica, Arial, sans-serif;
     color:rgb(255, 255, 255);
     letter-spacing: -.15rem;
+    margin-top: 5rem;
   }
   
   h3 {
-    /*margin-top: 0;
-    margin-bottom: 12rem;*/
     font-weight: 500; 
     font-family: "futura-pt", Helvetica, Arial, sans-serif;
     color:rgb(255, 255, 255);
@@ -225,8 +229,6 @@
   }
   
   h2, h4, h5, h6 {
-   /* margin-top: 0;
-    margin-bottom: 2.5rem; */
     font-weight: 700; 
     font-family: "futura-pt", Helvetica, Arial, sans-serif;
     color:rgb(255, 255, 255);
@@ -243,7 +245,8 @@
   
   /* Larger than phablet */
   @media (min-width: 550px) {
-    h1 { font-size: 3.6rem; line-height: 1.2;margin-top:33rem;}
+    #arrow-up{ margin-top: 5em;}
+    h1 { font-size: 3.6rem; line-height: 1.2; margin-top: 15rem;}
     h2 { font-size: 2.4rem; }
     h3 { font-size: 3.0rem; letter-spacing: -.1rem;}
     h4 { font-size: 3.0rem; }
