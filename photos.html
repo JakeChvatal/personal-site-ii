@@ -50,33 +50,43 @@
 
 <body onload = "filterSelection('film')">
     
+
+    <div id="arrow-right">
+        <a href = "index.html" class = "button">
+        <div class="arrow">╲</div>
+        <div class="arrow">╱</div>
+        </a>
+    </div>
+        
     <div class = "container">
-            <div class = "bar">
-                    <table><tbody><tr>
-                        <td><a href = "#best" onclick = "filterSelection('best')">
-                            <h2 class = "title">Jacob Chvatal</h2>
-                        </a></td>
-                        <td class = "subtitle">
-                            <a href = "#professional" onclick = "filterSelection('pro')">
-                                <h6>Professional</h6>
-                            </a></td>
-                        <td class = "subtitle">
-                            <a href = "#film" onclick = "filterSelection('film')">
-                                <h6>Film</h6>
-                        </a></td>
-                        <td class = "subtitle">
-                                <a href = "#landscape" onclick = "filterSelection('landscape')">
-                                    <h6>Landscape</h6>
-                                </a></td>
-                    </tr></tbody></table>
-                </div>
-            
+        <div class = "bar">
+            <table><tbody><tr>            
+            <td>
+                <a href = "https://www.instagram.com/jakechvatal" id = "ig" class = "icon">
+                    <i class = "fab fa-instagram fa-lg"></i>
+                </a></td>
+            <td><a href = "index.html" onclick = "filterSelection('film')">
+                <h2 class = "title">Jacob Chvatal</h2>
+            </a></td>
+            <td>
+                <a href = "#professional" onclick = "filterSelection('pro')">
+                    <h6 class = "subtitle">Professional</h6>
+                </a></td>
+            <td>
+                <a href = "#film" onclick = "filterSelection('film')">
+                    <h6 class = "subtitle">Film</h6>
+            </a></td>
+            <td>
+                <a href = "#landscape" onclick = "filterSelection('landscape')">
+                    <h6 class = "subtitle">Landscape</h6>
+                </a></td>
+            </tr></tbody></table>
+        </div>
+        
         <div class = "photo film">
             <img src = "./photos/sunday-riot.png">
-
             <img src = "./photos/vicki-adidas.jpg">
             <img src = "./photos/har-friends.jpg">
-
             <img src = "./photos/kathy-chains.jpg">
         
         </div>
@@ -91,8 +101,12 @@
         </div>
 
     <div class="row" style="margin-top:5rem;"><hr class="f"><div class="footer">
-        &copy; 2018 <a href="mailto:jacob@chvatal.com">Jacob Chvatal</a>.       
+        &copy; 2018 <a href="mailto:jacob@chvatal.com">Jacob Chvatal</a>.   
       </div></div>
+
+      
     </div>
+
+    
 </body>
 </html>

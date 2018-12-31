@@ -21,7 +21,7 @@
   width: 100%;
 }
 
-.bar.subtitle{
+.subtitle{
   display: none;
   padding-left: 2em;
 }
@@ -55,6 +55,10 @@
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box; 
+}
+
+#blah-container{
+  display: inline-block;
 }
 
 img {
@@ -150,6 +154,7 @@ h3 {
 h2, h4, h5, h6 {
   font-weight: 700; 
   font-family: "futura-pt", Helvetica, Arial, sans-serif;
+  color:rgb(255, 255, 255);
   text-transform: uppercase;
   letter-spacing:.3rem;
 }
@@ -171,7 +176,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, .subtitle:hover {
   color:rgb(255, 180, 180);
   transition:.5s;
 }
@@ -247,6 +252,10 @@ pre > code {
 @media (min-width: 550px) {
   .container {
     width: 80%; 
+  }
+
+  .subtitle{
+    display: inline;
   }
 
   #arrow-up{ margin-top: 5em;}
