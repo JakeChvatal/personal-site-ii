@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="utf-8">
+    <title>Photography | Jacob Chvatal</title>
+    <meta name="description" content="Jacob Chvatal's photographic portfolio.">
+    <meta name="author" content="Jacob Chvatal">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script id = "FilterScript">
+        function filterSelection(type){
+            let elems = document.getElementsByClassName("photo");
+
+            for(let i = 0; i < elems.length; i++){
+                removeClass(elems[i], "show");
+                if(elems[i].className.indexOf(type) > -1) addClass(elems[i], "show");
+            }
+        }
+
+        function addClass(elem, name){
+            let arr1 = elem.className.split(" ");
+            let arr2 = name.split(" ");
+
+            for(let i = 0; i< arr2.length; i++){
+                if(arr1.indexOf(arr2[i]) == -1){
+                    elem.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function removeClass(elem, name){
+            let arr1 = elem.className.split(" ");
+            let arr2 = name.split(" ");
+            
+            for(let i = 0; i< arr2.length; i++){
+                while(arr1.indexOf(arr2[i]) > -1){
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            elem.className = arr1.join(" ");
+        }
+    </script>
+</head>
+
+<body onload = "filterSelection('film')">
+    
+    <div class = "container">
+            <div class = "bar">
+                    <table><tbody><tr>
+                        <td><a href = "#best" onclick = "filterSelection('best')">
+                            <h2 class = "title">Jacob Chvatal</h2>
+                        </a></td>
+                        <td class = "subtitle">
+                            <a href = "#professional" onclick = "filterSelection('pro')">
+                                <h6>Professional</h6>
+                            </a></td>
+                        <td class = "subtitle">
+                            <a href = "#film" onclick = "filterSelection('film')">
+                                <h6>Film</h6>
+                        </a></td>
+                        <td class = "subtitle">
+                                <a href = "#landscape" onclick = "filterSelection('landscape')">
+                                    <h6>Landscape</h6>
+                                </a></td>
+                    </tr></tbody></table>
+                </div>
+            
+        <div class = "photo film">
+            <img src = "./photos/sunday-riot.png">
+
+            <img src = "./photos/vicki-adidas.jpg">
+            <img src = "./photos/har-friends.jpg">
+
+            <img src = "./photos/kathy-chains.jpg">
+        
+        </div>
+        
+        <div class = "photo pro">
+            <img src = "./photos/vicki-linkedin-2.jpg">
+        </div>
+
+        <div class = "photo landscape">
+            <img src = "./photos/sunset-tc.jpg">
+            <img src = "./photos/boise-drive.jpg">
+        </div>
+
+    <div class="row" style="margin-top:5rem;"><hr class="f"><div class="footer">
+        &copy; 2018 <a href="mailto:jacob@chvatal.com">Jacob Chvatal</a>.       
+      </div></div>
+    </div>
+</body>
+</html>

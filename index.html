@@ -16,14 +16,14 @@
 		</div>
 
 		<div id="arrow-down">
-			<a href = "about.html" class = "button">
+			<a href = "about" class = "button">
 			<div class="arrow">╲╱</div>
 			</a>
 		</div>
 
 		<div id="three-container"></div>
 
-		<script src="./build/three.js"></script>
+		<script src="./build/three.min.js"></script>
 
 		<script src="./controls/JakeControls.js"></script>
 
@@ -179,8 +179,9 @@
 
 		<script>
 			if ( ! Detector.webgl ) {
-				Detector.addGetWebGLMessage();
+				window.open("about.html", "_self");
 			}
+
 			var SCREEN_WIDTH = window.innerWidth;
 			var SCREEN_HEIGHT = window.innerHeight;
 
