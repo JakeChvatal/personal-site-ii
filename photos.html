@@ -45,38 +45,71 @@
             }
             elem.className = arr1.join(" ");
         }
+        
+        function toggleMenu() {
+            let menuContainer = document.getElementById("bar");
+            let menuItems = menuContainer.getElementsByClassName("subtitle");
+
+            for(let i = 0; i < menuItems.length; i++){
+                menuItems[i].addEventListener("click", function(){
+                    
+                    let current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            } 
+        }
+
+        function modalSetup(){
+            let modal = document.getElementById("imgModal");
+            let imgs = document.getElementsByTagName("img");
+            let modalImg = document.getElementById("modalImg");
+            
+            for(let i = 0; i< imgs.length; i++){
+                imgs[i].onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            }
+
+            let closingX = document.getElementsByClassName("close")[0];
+            closingX.onclick = function(){
+                modal.style.display = "none";
+            }
+        }
     </script>
 </head>
 
-<body onload = "filterSelection('film')">
-    
+<body onload = "toggleMenu(); filterSelection('film'); modalSetup();" >
 
     <div id="arrow-right">
-        <a href = "index.html" class = "button">
+        <a href = "/" class = "button">
         <div class="arrow">╲</div>
         <div class="arrow">╱</div>
         </a>
     </div>
+
+    <div class = "modal" id = "imgModal">
+        <span class = "close">&times;</span>
+        <img class = "modal-content" id = "modalImg">
+        <div id = "caption"></div>
+    </div>
         
     <div class = "container">
-        <div class = "bar">
+        <div id = "bar">
             <table><tbody><tr>            
-            <td>
-                <a href = "https://www.instagram.com/jakechvatal" id = "ig" class = "icon">
-                    <i class = "fab fa-instagram fa-lg"></i>
-                </a></td>
-            <td><a href = "index.html" onclick = "filterSelection('film')">
+            <td><a>
                 <h2 class = "title">Jacob Chvatal</h2>
             </a></td>
-            <td>
+            <td class = "subtitle-outer">
                 <a href = "#professional" onclick = "filterSelection('pro')">
                     <h6 class = "subtitle">Professional</h6>
                 </a></td>
-            <td>
+            <td class = "subtitle-outer">
                 <a href = "#film" onclick = "filterSelection('film')">
-                    <h6 class = "subtitle">Film</h6>
+                    <h6 class = "subtitle active">Film</h6>
             </a></td>
-            <td>
+            <td class = "subtitle-outer">
                 <a href = "#landscape" onclick = "filterSelection('landscape')">
                     <h6 class = "subtitle">Landscape</h6>
                 </a></td>
@@ -84,20 +117,26 @@
         </div>
         
         <div class = "photo film">
-            <img src = "./photos/sunday-riot.png">
-            <img src = "./photos/vicki-adidas.jpg">
-            <img src = "./photos/har-friends.jpg">
-            <img src = "./photos/kathy-chains.jpg">
-        
+            <img class = "disp-photo" src = "./photos/sunday-riot.png">
+            <img class = "disp-photo" src = "./photos/vicki-adidas.jpg">
+            <img class = "disp-photo" src = "./photos/har-friends.jpg">
+            <img class = "disp-photo" src = "./photos/kathy-chains.jpg">
+            <img class = "disp-photo" src= "./photos/concert-ambiance.jpg">
+            <img class = "disp-photo" src = "./photos/concert-flowers.jpg">
+        </div>
+
+        <div class = "photo polaroid">
+            <img class = "disp-photo" src = "./photos/polaroid-tree.jpg">
         </div>
         
         <div class = "photo pro">
-            <img src = "./photos/vicki-linkedin-2.jpg">
+            <img class = "disp-photo" src = "./photos/vicki-linkedin-2.jpg">
         </div>
 
         <div class = "photo landscape">
-            <img src = "./photos/sunset-tc.jpg">
-            <img src = "./photos/boise-drive.jpg">
+            <img class = "disp-photo" src = "./photos/sunset-tc.jpg">
+            <img class = "disp-photo" src = "./photos/boise-drive.jpg">
+            <img class = "disp-photo" src = "./photos/window-fog.jpg">
         </div>
 
     <div class="row" style="margin-top:5rem;"><hr class="f"><div class="footer">
